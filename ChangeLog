@@ -1,0 +1,88 @@
+1.4.05 -> 1.4.06
+----------------
+
+- code cleanup, should compile with no warnings (ds)
+
+1.4.04 -> 1.4.05
+----------------
+
+- produce PIE binary (Colin Coe)
+
+1.4.03 -> 1.4.04
+----------------
+
+- no-return-in-nonvoid-function patches (Walery Wysotsky)
+
+1.4.02 -> 1.4.03
+----------------
+
+- close stdin/out/err for daemon (reported by Arnaud Gomes-do-Vale)
+
+1.4.01 -> 1.4.02
+----------------
+
+- bug in find_port fixed (ds)
+- small fix for x86_64 (ds)
+- bug in external.c vlan name 'none' comparison
+
+1.4 -> 1.4.01
+-------------
+
+- added some missing header files (ds)
+- added some missing files (ds)
+
+1.3 -> 1.4
+-----------
+
+- -c option, if port is already connected to different vlan then deny it, default is to allow
+- string format vulnerability fixed (http://www.securityfocus.com/bid/15072/info) by Manuel Bouyer < bouyer netbsd org >
+- FreeBSD compile fix in daemon.c by Yuri Meshalkin
+- -e option fixes (ds)
+- more readable logging messages by Marc Baudoin ( babafou _at_ pasteur.fr )
+ 
+1.2 -> 1.3
+----------
+
+- option -e, use of external program for mac -> vlan mapping (Dori Seliskar)
+- change of default logging level to more sensible SYSTEM|PARSER|VQP|INFO 
+  and some new log messages (Alex Dawson < alex _at_ ee.uwa.edu.au >)
+- finally applied "SIGHUP fix for Solaris" patch from Steven Kehlet
+- start/stop script from Phil A. Hedrick <phil _dot_ hedrick _at_ capgemini _dot_ com>
+  in contrib directory
+
+1.1 -> 1.2
+----------
+
+- netreg extension + bugfixes by David Parsley <parsley _at_ linuxjedi.org>
+- man page by Alex Kirk <alex _at_ schnarff.com>
+- test client tool by Alex Dawson ( alex _at_ ee.uwa.edu.au )
+- vmps-port-policies should work now properly, network byte order cleanup (Dori Seliskar) 
+
+1.0 -> 1.1
+----------
+
+- make it compile & run under OpenBSD
+- on SIGHUP now rereads its database, 
+  contributed by Alex Dawson ( alex _at_ ee.uwa.edu.au )
+
+0.01 -> 1.0
+-----------
+
+- bump version number, so people will stop asking me if this
+  is any good with such low version number ;), after all 1.0 is well
+  deserved, we run it for more than two years now (aug 2003) and
+  till now the network has grown to ~40 switches and ~700 hosts
+  (actually ~800, but some 120 clients are still in todo list for
+   dynamic vlans)
+
+- compilation on Solaris should work now,
+  tested with gcc, gmake, Solaris 9
+
+- should run properly on non i386 arch now, tested on SPARC
+
+- fixed wrong log level command line option handling ( -l )
+
+- fixed wrong parameter handling for bind address ( -a ) 
+
+- fixed fallback vlan bug
+
